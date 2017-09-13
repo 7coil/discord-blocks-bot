@@ -1,4 +1,4 @@
-var Discord = require('discord.js');var object, message, command, client, Matt_Parker, input, prefix;
+var Discord = require('discord.js');var object, message, RichEmbed, command, client, Matt_Parker, input, prefix;
 
 function subsequenceFromStartLast(sequence, at1) {
   var start = at1;
@@ -38,6 +38,15 @@ client.on('ready', () => {  console.log('Client is ready');
         object = ({});
         object['file'] = (new Discord.Attachment('https://random.birb.pw/tweet/random','birb.jpg'));
         message.reply('Have a random birb from `random.birb.pw`',object);
+      } else if (command == 'info') {
+        object = ({});
+        RichEmbed = (new Discord.RichEmbed());
+        RichEmbed = (RichEmbed.setTitle('DiscordBlocks Bot'));
+        RichEmbed = (RichEmbed.setURL('https://github.com/moustacheminer/discord-blocks-bot'));
+        RichEmbed = (RichEmbed.setDescription('DiscordBlocks Bot is a Discord bot made entirely in DiscordBlocks, the block based programming language. (like MIT Scratch)'));
+        RichEmbed = (RichEmbed.addField('Links',(['[Bot GitHub](https://github.com/moustacheminer/discord-blocks-bot)','- [DiscordBlocks GitHub](https://github.com/moustacheminer/discord-blocks-bot)','- [Edit Bot](https://moustacheminer.com/discord-blocks/#https://moustacheminer.com/discord-blocks-bot/bot/project.xml)','- [Invite (why?)](https://discordapp.com/oauth2/authorize?=&client_id=233702481375395843&scope=bot&permissions=0)'].join('')),false));
+        object['embed'] = RichEmbed;
+        message.reply('Info',object);
       }
     }
   }

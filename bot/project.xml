@@ -223,7 +223,7 @@
                                                     </value>
                                                     <next>
                                                       <block type="controls_if" id="FED7Wh8DrSnQnnb:;.+[">
-                                                        <mutation elseif="3"></mutation>
+                                                        <mutation elseif="4"></mutation>
                                                         <value name="IF0">
                                                           <block type="logic_compare" id="9!T,nJtFds|CK|wFJ+qg">
                                                             <field name="OP">EQ</field>
@@ -402,6 +402,177 @@
                                                                         <field name="VAR">object</field>
                                                                       </block>
                                                                     </value>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </statement>
+                                                        <value name="IF4">
+                                                          <block type="logic_compare" id="$Jym7tY{nk,Yr[c2]`:?">
+                                                            <field name="OP">EQ</field>
+                                                            <value name="A">
+                                                              <block type="variables_get" id="4~v.(?.0d6(e+$V=/f--">
+                                                                <field name="VAR">command</field>
+                                                              </block>
+                                                            </value>
+                                                            <value name="B">
+                                                              <block type="text" id="jpwZx*FG/jnQM)#h^8qz">
+                                                                <field name="TEXT">info</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <statement name="DO4">
+                                                          <block type="variables_set" id="(TL,Xdl-iaLSC.NJkU}=">
+                                                            <field name="VAR">object</field>
+                                                            <value name="VALUE">
+                                                              <block type="mss_object" id="jOK]PHAAy#Np@MfM4Pc="></block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="variables_set" id="E[|#n;mj*EKu.`s-zn7U">
+                                                                <field name="VAR">RichEmbed</field>
+                                                                <value name="VALUE">
+                                                                  <block type="RichEmbed_constructor" id="r.+sJ:6P%nW:2s(2Ev?J"></block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="variables_set" id="0Z96dgKfMQRW#w{GLPte">
+                                                                    <field name="VAR">RichEmbed</field>
+                                                                    <value name="VALUE">
+                                                                      <block type="RichEmbed_setTitle" id="uO*Tk*9@sCO*6FE=3Iq=">
+                                                                        <value name="RichEmbed">
+                                                                          <block type="variables_get" id="_c}J3qO!vuZ;Ip-k~5Ej">
+                                                                            <field name="VAR">RichEmbed</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="title">
+                                                                          <block type="text" id="1e`h}u{-p9J~@_7k?[zn">
+                                                                            <field name="TEXT">DiscordBlocks Bot</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="variables_set" id="P7BaXrS4yzv;zLDR^WPy">
+                                                                        <field name="VAR">RichEmbed</field>
+                                                                        <value name="VALUE">
+                                                                          <block type="RichEmbed_setURL" id="{sC`Z-)Cl^SSB[2dBftW">
+                                                                            <value name="RichEmbed">
+                                                                              <block type="variables_get" id="IG%Hdv_%t_7V+6ol_L;X">
+                                                                                <field name="VAR">RichEmbed</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="url">
+                                                                              <block type="text" id="9$YCbMujus0hSQq3sVBj">
+                                                                                <field name="TEXT">https://github.com/moustacheminer/discord-blocks-bot</field>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="variables_set" id="+GfHku@fVd!~_TRN]76$">
+                                                                            <field name="VAR">RichEmbed</field>
+                                                                            <value name="VALUE">
+                                                                              <block type="RichEmbed_setDescription" id="+RQm)A2ewY_xkS_afNEB">
+                                                                                <value name="RichEmbed">
+                                                                                  <block type="variables_get" id="}(2m*[W:Rn$ie`9`,F`3">
+                                                                                    <field name="VAR">RichEmbed</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="description">
+                                                                                  <block type="text" id="gf8x`(02|SBo,!J~/|7o">
+                                                                                    <field name="TEXT">DiscordBlocks Bot is a Discord bot made entirely in DiscordBlocks, the block based programming language. (like MIT Scratch)</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="variables_set" id="JKwo*~v$b`W%gN/h8nub">
+                                                                                <field name="VAR">RichEmbed</field>
+                                                                                <value name="VALUE">
+                                                                                  <block type="RichEmbed_addField" id="eB7%c3u`ee5+=;o)czrl" inline="false">
+                                                                                    <value name="RichEmbed">
+                                                                                      <block type="variables_get" id="EMqwWYC*VY?,3ShWr6P?">
+                                                                                        <field name="VAR">RichEmbed</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="name">
+                                                                                      <block type="text" id="Eqae2W`J1V+10j%eKZpG">
+                                                                                        <field name="TEXT">Links</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="value">
+                                                                                      <block type="text_join" id="Li2,r1sYU;gu)N1}Iu;,">
+                                                                                        <mutation items="4"></mutation>
+                                                                                        <value name="ADD0">
+                                                                                          <block type="text" id="Pal~Q7w,}p^4+CyQC9b3">
+                                                                                            <field name="TEXT">[Bot GitHub](https://github.com/moustacheminer/discord-blocks-bot)</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="ADD1">
+                                                                                          <block type="text" id="dA4Tp=tq8m*_Y_ri-b5f">
+                                                                                            <field name="TEXT">- [DiscordBlocks GitHub](https://github.com/moustacheminer/discord-blocks-bot)</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="ADD2">
+                                                                                          <block type="text" id="ZXo};^9W{P_MN2LW6^k$">
+                                                                                            <field name="TEXT">- [Edit Bot](https://moustacheminer.com/discord-blocks/#https://moustacheminer.com/discord-blocks-bot/bot/project.xml)</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="ADD3">
+                                                                                          <block type="text" id="FtcpbY6T0D1mfvxCQ5Sd">
+                                                                                            <field name="TEXT">- [Invite (why?)](https://discordapp.com/oauth2/authorize?=&amp;client_id=233702481375395843&amp;scope=bot&amp;permissions=0)</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="inline">
+                                                                                      <block type="logic_boolean" id="0jf!1xca*o.T|+CUhLQ6">
+                                                                                        <field name="BOOL">FALSE</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <next>
+                                                                                  <block type="mss_object_set" id="Y%`N/~XXme;z?{XAKV*7">
+                                                                                    <field name="key">embed</field>
+                                                                                    <value name="object">
+                                                                                      <block type="variables_get" id="Z}elcx?DdoSlPN9(Va=j">
+                                                                                        <field name="VAR">object</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <value name="token">
+                                                                                      <block type="variables_get" id="B_0`I=ZKRm2..W%{FnG!">
+                                                                                        <field name="VAR">RichEmbed</field>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                    <next>
+                                                                                      <block type="Message_reply" id="%%3q$(Vu4zmy]Hax|)(F">
+                                                                                        <value name="Message">
+                                                                                          <block type="variables_get" id="c5MEW/K-^iIgze24toos">
+                                                                                            <field name="VAR">message</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="content">
+                                                                                          <block type="text" id="QeDD|BdYC[4APe_PDRe`">
+                                                                                            <field name="TEXT">Info</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <value name="options">
+                                                                                          <block type="variables_get" id="eeD8q:5F*+@W.]a8O66M">
+                                                                                            <field name="VAR">object</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </next>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
                                                                   </block>
                                                                 </next>
                                                               </block>

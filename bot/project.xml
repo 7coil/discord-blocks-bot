@@ -293,10 +293,25 @@
                                                               </block>
                                                             </value>
                                                             <value name="content">
-                                                              <block type="Client_ping" id="h#v$UIm?:~/jzys4s$5Z">
-                                                                <value name="Client">
-                                                                  <block type="variables_get" id="?y:|Vh0UDmI}WO:GSw^g">
-                                                                    <field name="VAR">client</field>
+                                                              <block type="text_join" id="xOAT$tfL]F(X$`fM%jVz">
+                                                                <mutation items="2"></mutation>
+                                                                <value name="ADD0">
+                                                                  <block type="math_round" id="k(Z*JUssghMzArI;q6!t">
+                                                                    <field name="OP">ROUND</field>
+                                                                    <value name="NUM">
+                                                                      <block type="Client_ping" id="h#v$UIm?:~/jzys4s$5Z">
+                                                                        <value name="Client">
+                                                                          <block type="variables_get" id="?y:|Vh0UDmI}WO:GSw^g">
+                                                                            <field name="VAR">client</field>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                                <value name="ADD1">
+                                                                  <block type="text" id="?Tf7-~qu-!=UM(k`[t]_">
+                                                                    <field name="TEXT">ms</field>
                                                                   </block>
                                                                 </value>
                                                               </block>

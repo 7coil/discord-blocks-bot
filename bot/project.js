@@ -1,4 +1,4 @@
-var Discord = require('discord.js');var object, message, RichEmbed, command, client, Matt_Parker, input, prefix;
+var Discord = require('discord.js');var client, command, input, Matt_Parker, message, object, prefix, RichEmbed;
 
 function subsequenceFromStartLast(sequence, at1) {
   var start = at1;
@@ -31,7 +31,7 @@ client.on('ready', () => {  console.log('Client is ready');
       if (command == 'parker') {
         message.reply((String('Have some Matt Parker! ') + String(listsGetRandomItem(Matt_Parker, false))),);
       } else if (command == 'ping') {
-        message.reply((client.ping),);
+        message.reply((String(Math.round(client.ping)) + String('ms')),);
       } else if (command == 'help') {
         message.reply((String('Welcome to DiscordBlocks! Available commands:') + String('`parker`, `ping`, `help`, `birb`')),);
       } else if (command == 'birb') {

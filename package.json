@@ -1,0 +1,21 @@
+{
+  "name": "discordblocks-bot",
+  "version": "1.0.0",
+  "description": "A Discord.js bot built using DiscordBlocks",
+  "main": "bot/project.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Blockly",
+    "Discord",
+    "Discord.js"
+  ],
+  "author": "7coil",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-plugin-import": "^2.7.0"
+  }
+}

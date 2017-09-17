@@ -1,4 +1,7 @@
-var Discord = require('discord.js');var client, command, input, Matt_Parker, message, object, prefix, RichEmbed;
+const Discord = require('discord.js');
+const querystring = require('querystring');
+const https = require('https');
+var object, message, RichEmbed, command, client, Matt_Parker, input, prefix, guild;
 
 function subsequenceFromStartLast(sequence, at1) {
   var start = at1;
@@ -22,6 +25,51 @@ prefix = 'discordblocks';
 client.login('');
 console.log('Welcome to Moustacheminer Server Services!');
 client.on('ready', () => {  console.log('Client is ready');
+});client.on('guildCreate', (guild) => {  if (client.browser) {
+  	//	console.error('Posting bot statistics is not yet allowed, because of cross site and XMLHttpRequest preflight problems.');
+  	$.ajax({
+  		method: 'POST',
+  		url: `https://discordbots.org/api/bots/${client.user.id}/stats`,
+  		data: {
+  			server_count: client.guilds.size
+  		},
+  		headers: {
+  			authorization: ''
+  		},
+  		success: (data) => {
+  			console.log(data);
+  		}
+  	})
+  } else {
+  	const postData = JSON.stringify({
+  		server_count: client.guilds.size
+  	});
+
+  	const options = {
+  		hostname: 'discordbots.org',
+  		path: `/api/bots/${client.user.id}/stats`,
+  		method: 'POST',
+  		headers: {
+  			'User-Agent': 'DiscordBot (https://moustacheminer.com/discord-blocks, 2017-09-14) DiscordBlocks',
+  			'Content-Type': 'application/json',
+  			'Content-Length': postData.length,
+  			Authorization: ''
+  		}
+  	};
+
+  	const req = https.request(options, (res) => {
+  		res.on('data', (data) => {
+  			console.log(data.toString('utf8'));
+  		});
+  	});
+
+  	req.on('error', (error) => {
+  		console.error(error);
+  	});
+
+  	req.write(postData);
+  	req.end();
+  }
 });client.on('message', (message) => {  if ((message.content).indexOf(prefix) + 1 == 1) {
     input = subsequenceFromStartLast((message.content), ((prefix.length + 1) - 1)).trim();
     console.log(input);

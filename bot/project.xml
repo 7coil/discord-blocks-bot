@@ -54,7 +54,7 @@
                       </block>
                     </value>
                     <next>
-                      <block type="Client_ready" id="ey^`cwFZ:-0^4H$4WbD|">
+                      <block type="Client_ready" id="ey^`cwFZ:-0^4H$4WbD|" collapsed="true">
                         <value name="Client">
                           <block type="variables_get" id="BJ6/R4IQ#|m[H!9*gEW]">
                             <field name="VAR">client</field>
@@ -73,7 +73,7 @@
                           </block>
                         </statement>
                         <next>
-                          <block type="Client_guildCreate" id="fCY5!.0(.1P(e/RpOd47">
+                          <block type="Client_guildCreate" id="fCY5!.0(.1P(e/RpOd47" collapsed="true">
                             <field name="guild">guild</field>
                             <value name="Client">
                               <block type="variables_get" id="$-0sh@y9t{4*:4LQ8GBK">
@@ -92,7 +92,7 @@
                               </block>
                             </statement>
                             <next>
-                              <block type="Client_message" id="pnNxXsPKV7MH`a9_.LU]">
+                              <block type="Client_message" id="pnNxXsPKV7MH`a9_.LU]" collapsed="true">
                                 <field name="message">message</field>
                                 <value name="Client">
                                   <block type="variables_get" id="T1eAy.nkA]rL8%HySe7;">
@@ -628,7 +628,7 @@
                                   </block>
                                 </statement>
                                 <next>
-                                  <block type="Client_messageReactionAdd" id="T,I0TxY+jBo}WvgthO@D">
+                                  <block type="Client_messageReactionAdd" id="T,I0TxY+jBo}WvgthO@D" collapsed="true">
                                     <field name="messageReaction">messageReaction</field>
                                     <field name="user">user</field>
                                     <value name="Client">

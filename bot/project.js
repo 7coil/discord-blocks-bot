@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const querystring = require('querystring');
 const https = require('https');
-var object, message, RichEmbed, command, client, Matt_Parker, input, prefix, guild;
+var object, message, RichEmbed, command, client, Matt_Parker, input, prefix, guild, starboard, messageReaction, user;
 
 function subsequenceFromStartLast(sequence, at1) {
   var start = at1;
@@ -96,6 +96,27 @@ client.on('ready', () => {  console.log('Client is ready');
         object['embed'] = RichEmbed;
         message.reply('Info',object);
       }
+    }
+  }
+});client.on('messageReactionAdd', (messageReaction,user) => {  console.log(((messageReaction.emoji)['name']));
+  if (false == ((messageReaction.message).guild)) {
+    console.log('Not in guild');
+  } else if ('264445053596991498' != (((messageReaction.message).guild).id)) {
+    console.log('Not in DBL');
+  } else if ('⭐' != ((messageReaction.emoji)['name'])) {
+    console.log('Not a star');
+  } else {
+    console.log('Star detected!');
+    starboard = ((((messageReaction.message).guild).channels).find('id','265156361791209475'));
+    if (starboard) {
+      object = ({});
+      RichEmbed = (new Discord.RichEmbed());
+      RichEmbed = (RichEmbed.setTitle((String('⭐') + String(((messageReaction.message).author).username))));
+      RichEmbed = (RichEmbed.setDescription((messageReaction.message)));
+      object['embed'] = RichEmbed;
+      starboard.send('Starboard',object);
+    } else {
+      console.log('Found starboard in DBL but could not find channel');
     }
   }
 });

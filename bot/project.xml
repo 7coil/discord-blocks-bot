@@ -627,6 +627,322 @@
                                     </statement>
                                   </block>
                                 </statement>
+                                <next>
+                                  <block type="Client_messageReactionAdd" id="T,I0TxY+jBo}WvgthO@D">
+                                    <field name="messageReaction">messageReaction</field>
+                                    <field name="user">user</field>
+                                    <value name="Client">
+                                      <block type="variables_get" id="HVz~?5,h8Q._w,I-UA.M">
+                                        <field name="VAR">client</field>
+                                      </block>
+                                    </value>
+                                    <statement name="function">
+                                      <block type="console_log" id="Zid)}ym-3@un~7o|yR/*">
+                                        <value name="text">
+                                          <shadow type="text" id=".R}d[aQ-[E]-Khz)wJ,i">
+                                            <field name="TEXT">Reaction detected!</field>
+                                          </shadow>
+                                          <block type="mss_property_get" id="l9NA}oRTlM?k5cR7)i|B">
+                                            <field name="key">name</field>
+                                            <value name="object">
+                                              <block type="MessageReaction_emoji" id="b8;@o-KMB=uO9).-qZz;">
+                                                <value name="MessageReaction">
+                                                  <block type="variables_get" id="()G^AR-qsTKELOJm%qP`">
+                                                    <field name="VAR">messageReaction</field>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                          </block>
+                                        </value>
+                                        <next>
+                                          <block type="controls_if" id="G_=AgYGQSy#{K|@K)_fQ">
+                                            <mutation elseif="2" else="1"></mutation>
+                                            <value name="IF0">
+                                              <block type="logic_compare" id="a_84h*R,fCivg2-g$woi">
+                                                <field name="OP">EQ</field>
+                                                <value name="A">
+                                                  <block type="logic_boolean" id="K@-KeiTglYXx-TP)M.:,">
+                                                    <field name="BOOL">FALSE</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="Message_guild" id="e`CB!_cnF3mu-5AX@OJ~">
+                                                    <value name="Message">
+                                                      <block type="MessageReaction_message" id="xpsAZ%cPf8K`b4Mpz^aF">
+                                                        <value name="MessageReaction">
+                                                          <block type="variables_get" id="Webv~?=H!Qu$v2UD97qY">
+                                                            <field name="VAR">messageReaction</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="DO0">
+                                              <block type="console_log" id="(UQyFx:up3Nm4)g$e$,^">
+                                                <value name="text">
+                                                  <shadow type="text" id="XSSb{N3.yFFr]#7!f]$R">
+                                                    <field name="TEXT">Not in guild</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </statement>
+                                            <value name="IF1">
+                                              <block type="logic_compare" id=".BC6X-M$=~$a()%mU^nG">
+                                                <field name="OP">NEQ</field>
+                                                <value name="A">
+                                                  <block type="text" id="%gvmSiyNpg[W[4Hi~N41">
+                                                    <field name="TEXT">264445053596991498</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="Guild_id" id="A-|1Q*oE9Cr`ifmOjrmf">
+                                                    <value name="Guild">
+                                                      <block type="Message_guild" id="Cd45i$QkXkD%,?I0F~4i">
+                                                        <value name="Message">
+                                                          <block type="MessageReaction_message" id=";_v{Ql0bJxCG`;nNv;{Q">
+                                                            <value name="MessageReaction">
+                                                              <block type="variables_get" id="|djI{b,vHOe/q4zHT.jE">
+                                                                <field name="VAR">messageReaction</field>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="DO1">
+                                              <block type="console_log" id="h_,oH3]Ohy/t))dZ..+l">
+                                                <value name="text">
+                                                  <shadow type="text" id="[0?C[,$oldOq`%p3^*V)">
+                                                    <field name="TEXT">Not in DBL</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </statement>
+                                            <value name="IF2">
+                                              <block type="logic_compare" id="2_b1.Q/n)@bgu]N3x6E!">
+                                                <field name="OP">NEQ</field>
+                                                <value name="A">
+                                                  <block type="text" id="4=rzms:q%R9x.f9PN8w=">
+                                                    <field name="TEXT">⭐</field>
+                                                  </block>
+                                                </value>
+                                                <value name="B">
+                                                  <block type="mss_property_get" id="o]|X8pp)@K=,RVEh?x,0">
+                                                    <field name="key">name</field>
+                                                    <value name="object">
+                                                      <block type="MessageReaction_emoji" id="OeyPVMe2y}Gam!1NpV;|">
+                                                        <value name="MessageReaction">
+                                                          <block type="variables_get" id="TkT=YsuG!aFJ#4I[bbj_">
+                                                            <field name="VAR">messageReaction</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                  </block>
+                                                </value>
+                                              </block>
+                                            </value>
+                                            <statement name="DO2">
+                                              <block type="console_log" id=".dJV_6|6D0ipN*r#4Bz5">
+                                                <value name="text">
+                                                  <shadow type="text" id=".)}YM.yVDP!r/xtT5lAE">
+                                                    <field name="TEXT">Not a star</field>
+                                                  </shadow>
+                                                </value>
+                                              </block>
+                                            </statement>
+                                            <statement name="ELSE">
+                                              <block type="console_log" id="kUN/6Wjk0i;y?gV9.gef">
+                                                <value name="text">
+                                                  <shadow type="text" id="9(G=a/9t.MBoA(0|JR,Y">
+                                                    <field name="TEXT">Star detected!</field>
+                                                  </shadow>
+                                                </value>
+                                                <next>
+                                                  <block type="variables_set" id="2zgHf8oc.)4HoLk!AUo7">
+                                                    <field name="VAR">starboard</field>
+                                                    <value name="VALUE">
+                                                      <block type="Collection_find" id="T=UfDHroml|$Y{zl8PqI" inline="false">
+                                                        <value name="Collection">
+                                                          <block type="Guild_channels" id="nDG!ZTv(uzyzdl4$Gj2K">
+                                                            <value name="Guild">
+                                                              <block type="Message_guild" id="?ej=)09/q?1i@LZaS$YO">
+                                                                <value name="Message">
+                                                                  <block type="MessageReaction_message" id="7I7hoPNmoeX.1T/TOfu^">
+                                                                    <value name="MessageReaction">
+                                                                      <block type="variables_get" id="0hMax]SvUtkG~pgPH]`2">
+                                                                        <field name="VAR">messageReaction</field>
+                                                                      </block>
+                                                                    </value>
+                                                                  </block>
+                                                                </value>
+                                                              </block>
+                                                            </value>
+                                                          </block>
+                                                        </value>
+                                                        <value name="propOrFn">
+                                                          <block type="text" id="WJFSA3ORHb.R}2DIU4C0">
+                                                            <field name="TEXT">id</field>
+                                                          </block>
+                                                        </value>
+                                                        <value name="value">
+                                                          <block type="text" id="Xu9gG^@pYxkrW?BSM[sP">
+                                                            <field name="TEXT">265156361791209475</field>
+                                                          </block>
+                                                        </value>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="controls_if" id="O]le+FXh1ahLn^0bBOv4">
+                                                        <mutation else="1"></mutation>
+                                                        <value name="IF0">
+                                                          <block type="variables_get" id="_hr?vx,=+}Ll;4W)M=::">
+                                                            <field name="VAR">starboard</field>
+                                                          </block>
+                                                        </value>
+                                                        <statement name="DO0">
+                                                          <block type="variables_set" id=".](zS0*|%B5zI6e[/Ua|">
+                                                            <field name="VAR">object</field>
+                                                            <value name="VALUE">
+                                                              <block type="mss_object" id="f1fq,}dg^2xLHv/OH7c`"></block>
+                                                            </value>
+                                                            <next>
+                                                              <block type="variables_set" id="V!u[R{!yd|_qge[=gH|]">
+                                                                <field name="VAR">RichEmbed</field>
+                                                                <value name="VALUE">
+                                                                  <block type="RichEmbed_constructor" id="P%2_W=krqe%29bu}yk7l"></block>
+                                                                </value>
+                                                                <next>
+                                                                  <block type="variables_set" id="Cp08W$(~y~XIWY!8SKkl">
+                                                                    <field name="VAR">RichEmbed</field>
+                                                                    <value name="VALUE">
+                                                                      <block type="RichEmbed_setTitle" id="lkUmxgWQousb|z=BRv1W">
+                                                                        <value name="RichEmbed">
+                                                                          <block type="variables_get" id=":6d/;um=L;0Vz-w:tRVR">
+                                                                            <field name="VAR">RichEmbed</field>
+                                                                          </block>
+                                                                        </value>
+                                                                        <value name="title">
+                                                                          <block type="text_join" id="62wPLYR!lMiCZ%p;+Q`^" inline="false">
+                                                                            <mutation items="2"></mutation>
+                                                                            <value name="ADD0">
+                                                                              <block type="text" id="D#bqmB[GkA=3|RzEwwa.">
+                                                                                <field name="TEXT">⭐</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="ADD1">
+                                                                              <block type="User_username" id="$nkrv,[xVA@*Xm5D%!Lv">
+                                                                                <value name="User">
+                                                                                  <block type="Message_author" id="Xv03jx}}6,IuyEa{A!IF">
+                                                                                    <value name="Message">
+                                                                                      <block type="MessageReaction_message" id="TqkTp-VStB9JsB]RiVW9">
+                                                                                        <value name="MessageReaction">
+                                                                                          <block type="variables_get" id="^S{G5n.KxD=6rGNEiBuF">
+                                                                                            <field name="VAR">messageReaction</field>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                      </block>
+                                                                                    </value>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                      </block>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="variables_set" id="+X@~!VR]RbbxjO,64N_5">
+                                                                        <field name="VAR">RichEmbed</field>
+                                                                        <value name="VALUE">
+                                                                          <block type="RichEmbed_setDescription" id="|/AyhCvbr:4LBUm*z9nc">
+                                                                            <value name="RichEmbed">
+                                                                              <block type="variables_get" id="XhzTPL{la.,/zqnZn0d3">
+                                                                                <field name="VAR">RichEmbed</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="description">
+                                                                              <block type="MessageReaction_message" id="o?a@Ho0{MM|C2,;Aj^mJ">
+                                                                                <value name="MessageReaction">
+                                                                                  <block type="variables_get" id="Gc^oB_j8#e{?]L,5yFq6">
+                                                                                    <field name="VAR">messageReaction</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </value>
+                                                                          </block>
+                                                                        </value>
+                                                                        <next>
+                                                                          <block type="mss_object_set" id="n{/@:fJ+_ixF5gq0xuz}">
+                                                                            <field name="key">embed</field>
+                                                                            <value name="object">
+                                                                              <block type="variables_get" id="Q.Lr`/!hjMZ+^dIzH/@:">
+                                                                                <field name="VAR">object</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <value name="token">
+                                                                              <block type="variables_get" id=")kXkVoa}Hnrl#OFuZ=97">
+                                                                                <field name="VAR">RichEmbed</field>
+                                                                              </block>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="TextChannel_send" id="uGHTzj0]2_^:inN[ePwa" inline="false">
+                                                                                <value name="TextChannel">
+                                                                                  <block type="variables_get" id="/=9wiieX0,=_4wo.7^xd">
+                                                                                    <field name="VAR">starboard</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="content">
+                                                                                  <block type="text" id="_4qyzpU9h}tT[(Q?iXv*">
+                                                                                    <field name="TEXT">Starboard</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                                <value name="options">
+                                                                                  <block type="variables_get" id="#[4RE).osg{MdssJ7r|o">
+                                                                                    <field name="VAR">object</field>
+                                                                                  </block>
+                                                                                </value>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </statement>
+                                                        <statement name="ELSE">
+                                                          <block type="console_log" id="19!}`gBkWOKIK0HKp`w`">
+                                                            <value name="text">
+                                                              <shadow type="text" id="lLMQMW{l8dwza$Tpsv1.">
+                                                                <field name="TEXT">Found starboard in DBL but could not find channel</field>
+                                                              </shadow>
+                                                            </value>
+                                                          </block>
+                                                        </statement>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </statement>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </statement>
+                                  </block>
+                                </next>
                               </block>
                             </next>
                           </block>

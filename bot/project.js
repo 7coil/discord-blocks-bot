@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const querystring = require('querystring');
 const https = require('https');
-var object, message, RichEmbed, command, client, Matt_Parker, input, prefix, guild, starboard, messageReaction, user;
+var object, starboard, RichEmbed, messageReaction, client, user, message, command, Matt_Parker, input, prefix, guild;
 
 function subsequenceFromStartLast(sequence, at1) {
   var start = at1;
@@ -81,7 +81,7 @@ client.on('ready', () => {  console.log('Client is ready');
       } else if (command == 'ping') {
         message.reply((String(Math.round(client.ping)) + String('ms')),);
       } else if (command == 'help') {
-        message.reply((String('Welcome to DiscordBlocks! Available commands:') + String('`parker`, `ping`, `help`, `birb`')),);
+        message.reply((String('Welcome to DiscordBlocks! Available commands:') + String('`parker`, `ping`, `help`, `birb`, `info`')),);
       } else if (command == 'birb') {
         object = ({});
         object['file'] = (new Discord.Attachment('https://random.birb.pw/tweet/random','birb.jpg'));
@@ -92,31 +92,10 @@ client.on('ready', () => {  console.log('Client is ready');
         RichEmbed = (RichEmbed.setTitle('DiscordBlocks Bot'));
         RichEmbed = (RichEmbed.setURL('https://github.com/moustacheminer/discord-blocks-bot'));
         RichEmbed = (RichEmbed.setDescription('DiscordBlocks Bot is a Discord bot made entirely in DiscordBlocks, the block based programming language. (like MIT Scratch)'));
-        RichEmbed = (RichEmbed.addField('Links',(['[Bot GitHub](https://github.com/moustacheminer/discord-blocks-bot)','- [DiscordBlocks GitHub](https://github.com/moustacheminer/discord-blocks-bot)','- [Edit Bot](https://moustacheminer.com/discord-blocks/#https://moustacheminer.com/discord-blocks-bot/bot/project.xml)','- [Invite (why?)](https://discordapp.com/oauth2/authorize?=&client_id=233702481375395843&scope=bot&permissions=0)'].join('')),false));
+        RichEmbed = (RichEmbed.addField('Links',(['[Bot GitHub](https://github.com/moustacheminer/discord-blocks-bot)',' - [DiscordBlocks GitHub](https://github.com/moustacheminer/discord-blocks-bot)',' - [Edit Bot](https://moustacheminer.com/discord-blocks/#https://moustacheminer.com/discord-blocks-bot/bot/project.xml)',' - [Invite (why?)](https://discordapp.com/oauth2/authorize?=&client_id=233702481375395843&scope=bot&permissions=0)'].join('')),false));
         object['embed'] = RichEmbed;
         message.reply('Info',object);
       }
-    }
-  }
-});client.on('messageReactionAdd', (messageReaction,user) => {  console.log(((messageReaction.emoji)['name']));
-  if (false == ((messageReaction.message).guild)) {
-    console.log('Not in guild');
-  } else if ('264445053596991498' != (((messageReaction.message).guild).id)) {
-    console.log('Not in DBL');
-  } else if ('⭐' != ((messageReaction.emoji)['name'])) {
-    console.log('Not a star');
-  } else {
-    console.log('Star detected!');
-    starboard = ((((messageReaction.message).guild).channels).find('id','265156361791209475'));
-    if (starboard) {
-      object = ({});
-      RichEmbed = (new Discord.RichEmbed());
-      RichEmbed = (RichEmbed.setTitle((String('⭐') + String(((messageReaction.message).author).username))));
-      RichEmbed = (RichEmbed.setDescription((messageReaction.message)));
-      object['embed'] = RichEmbed;
-      starboard.send('Starboard',object);
-    } else {
-      console.log('Found starboard in DBL but could not find channel');
     }
   }
 });
